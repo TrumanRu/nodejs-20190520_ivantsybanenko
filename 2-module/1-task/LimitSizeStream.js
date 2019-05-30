@@ -8,7 +8,7 @@ class LimitSizeStream extends stream.Transform {
     this._limit = (options.limit == null) ? 0 : options.limit;
     this._total = 0;
     this.on('error', (e) => {
-      console.error(e);
+      // console.error(e);
       this.destroy(e);
     });
   }
