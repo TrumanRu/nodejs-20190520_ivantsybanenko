@@ -9,7 +9,7 @@ class LimitSizeStream extends stream.Transform {
     this._total = 0;
     this.on('error', (e) => {
       // console.error(e);
-      this.destroy(e);
+      // this.destroy(e);
     });
   }
 
