@@ -1,7 +1,10 @@
 const LimitSizeStream = require('./LimitSizeStream');
 const fs = require('fs');
 
-const limitedStream = new LimitSizeStream({limit: 8}); // 8 байт
+const limitedStream = new LimitSizeStream({
+  limit: 8,
+  highWaterMark: 10,
+}); // 8 байт
 const outStream = fs.createWriteStream('out.txt');
 
 outStream.on('end', (chunk) => {
