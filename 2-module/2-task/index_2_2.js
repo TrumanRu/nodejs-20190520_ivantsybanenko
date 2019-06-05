@@ -18,10 +18,6 @@ class Transformer extends stream.Transform {
   }
 
   _transform(chunk, encoding, callback) {
-    //console.log(chunk);
-    let pos1 = 0;
-    let pos2 = 0;
-
     if (this._size > 0) {
       callback(null, chunk);
     } else {
